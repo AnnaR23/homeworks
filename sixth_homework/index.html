@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Таблиця в стилі П'єта Мондріана</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <table class="btable">
+    <tr>
+      <td colspan="2"> ряд 1, ячейка 1-2 </td>
+      <td colspan="3"> ряд 1, ячейка 3-4-5 </td>
+      <td class="cell6_7" colspan="2"> ряд 1, ячейка 6-7 </td>
+      <td class="cell8" rowspan="6"> ряд 1, ячейка 8-8-8-8-8-8 </td>
+    </tr>
+    <tr>
+      <td rowspan="2"> ряд 2, ячейка 1-1 </td>
+      <td class="cell2_3_4_5" colspan="4" rowspan="4"> ряд 2, ячейка 2-3-4-5 </td>
+      <td class="cell6_7" colspan="2" rowspan="2"> ряд 2, ячейка 6-7 </td>
+    </tr>
+    <tr><!--3 ряд-->
+    </tr>
+    <tr>
+      <td rowspan="3"> ряд 4, ячейка 1-1-1 </td>
+      <td rowspan="2"> ряд 4, ячейка 6-6 </td>
+      <td rowspan="2"> ряд 4, ячейка 7-7 </td>
+    </tr>
+    <tr><!--5 ряд-->
+    </tr>
+    <tr>
+      <td class="cell2_3" colspan="2"> ряд 6, ячейка 2-3 </td>
+      <td colspan="2"> ряд 6, ячейка 4-5 </td>
+      <td colspan="2"> ряд 6, ячейка 6-7 </td>
+    </tr>
+    <tr>
+      <td class="cell1_1" rowspan="2"> ряд 7, ячейка 1-1 </td>
+      <td class="cell2-3" colspan="2"> ряд 7, ячейка 2-3
+        <table class="nested_cell">
+          <tr>
+            <td colspan="2"> insidet </td>
+          </tr>
+        </table>
+      </td>
+      <td class="table_container" colspan="2"> 7.4-5
+        <table class="inside">
+          <tr>
+            <td colspan="2"> table inside 1-2 </td>
+          </tr>
+        </table>
+      </td>
+      <td class="cell6-7" colspan="2"> ряд 7, ячейка 6-7 </td>
+      <td class="cell8_8" rowspan="2"> ряд 7, ячейка 8-8 </td>
+    </tr>
+    <tr>
+      <td class="cell_before" colspan="2"> ряд 8, ячейка 2-3 </td>
+      <td class="cell_last" colspan="4"> ряд 8, ячейка 4-5-6-7 </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

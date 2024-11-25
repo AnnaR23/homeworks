@@ -1,0 +1,102 @@
+.container {
+    margin: 30px;
+}
+
+.btable {
+    border: 5px solid black;
+    width: 700px;
+    height: 700px;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.btable td {
+    border: 10px solid black;
+    padding: 0;
+    vertical-align: middle;
+}
+
+td.table_container {
+    padding: 0;
+    vertical-align: bottom;
+}
+
+.inside {
+    border-collapse: collapse;
+    padding: 0;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.inside td {
+    border: 2px solid black;
+    background-color: black;
+    padding: 5px;
+    width: 100%;
+    height: 3%;
+}
+
+.cell6_7 {
+    background-color: yellow;
+}
+
+.cell2_3_4_5 {
+    background-color: red;
+}
+
+.cell2_3 {
+    background-color: black;
+    width: 25%;
+    height: 10%;
+}
+
+.cell1_1 {
+    background-color: yellow;
+}
+
+.cell8_8 {
+    background-color: red;
+}
+
+.cell6-7 {
+    background-color: blue;
+    height: 20%;
+    width: 33%;
+}
+
+.cell8 {
+    width: 3%;
+    height: 75%;
+}
+
+.cell_last {
+    width: 65%;
+    height: 3%;
+}
+
+.cell2-3 {
+    background-color: white;
+    width: 100%;
+    min-height: 40%;
+    border-bottom: none !important;
+}
+
+.cell_before {
+    border-top: none !important;
+}
+
+.nested_cell {
+    border: 1px solid black;
+    background-color: black;
+    width: 100%;
+    height: 80%;
+    margin-bottom: 35%;
+}
+
+.nested_cell td {
+    background-color: black;
+}
+
+.btable td {
+    color: transparent;
+}
