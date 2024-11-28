@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>overflow</title>
+  <link rel="stylesheet" href="overflow.css">
+</head>
+<body>
+
+<ul class="menu">
+  <li><a href="properties.html">Properties_css</a> </li>
+  <li><a href="styles_reset_css.html">Styles_reset_css</a> </li>
+  <li><a href="float_clear.html">Float_clear</a> </li>
+  <li><a href="overflow.html">Overflow</a> </li>
+  <li><a href="positions.html">Positions</a> </li>
+</ul>
+
+<div class="container">
+  <p>
+    Свойство CSS overflow определяет, необходимо ли для переполненного блочного элемента содержимое обрезать,
+    предоставить полосы прокрутки или просто отобразить.
+    Использование свойства overflow со значениями, отличными от visible, (значение, принятое по умолчанию), создаёт
+    новый блочный контекст форматирования. Это технически необходимо, поскольку если бы float пересекался с элементом
+    прокрутки, это потребовало бы обеспечить обтекание содержимого прокручиваемого элемента вокруг вторгающихся
+    float'ов. Обтекание при этом было бы необходимо производить после каждого шага прокрутки заново, что привело бы к
+    заметному замедлению прокрутки. Обратите внимание, что при программной установке атрибута scrollTop для
+    соответствующего HTML-элемента, даже если overflow имеет значение hidden, элемент, возможно, придётся прокрутить.
+  </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+.menu li {
+    list-style: none;
+    margin: 40px 0 1px;
+    padding: 25px 10px 10px;
+    text-align: center;
+    display: inline;
+}
+
+.float_left {
+    background-color: lightpink;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding: 5px;
+}
+
+.float_right {
+    background-color: lightpink;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    float: right;
+    padding: 5px;
+}
+
+.float_none {
+    background-color: lightpink;
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    float: none;
+    padding: 5px;
+}
+
+.clear-both {
+    background-color: #7ed9f8;
+    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    padding: 10px;
+    clear: both;
+}
