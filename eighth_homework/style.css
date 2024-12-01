@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    padding: 0;
 }
 
 .top-container {
@@ -98,40 +97,42 @@
     margin-bottom: 10px;
 }
 
+.inner-container {
+    width: 450px;
+    height: 120px;
+    float: right;
+    margin-right: 10px;
+}
+
 .big {
-    width: 19%;
-    height: 76%;
+    width: 220px;
+    height: 100px;
     background-color: gray;
     border: 1px solid black;
     float: left;
-    margin-left: 60%;
-    margin-top: 1%;
-    /*margin: 10px 5px 0 730px;*/
+    margin-top: 10px;
+}
+
+.general-container {
+    width: 220px;
+    height: 120px;
+    float: right;
 }
 
 .last-top {
-    width: 19%;
-    height: 35%;
+    width: 220px;
+    height: 45px;
     background-color: gray;
     border: 1px solid black;
-    float: right;
-    margin-top: 1%;
-    margin-right: 1%;
-    margin-bottom: 1%;
-    /*margin-top: 10px;
-    margin-right: 10px;*/
+    margin-top: 10px;
 }
 
 .last-bottom {
-    width: 19%;
-    height: 35%;
+    width: 220px;
+    height: 45px;
     background-color: gray;
     border: 1px solid black;
-    float: right;
-    margin-top: 5%;
-    margin-right: -19%;
-    /*margin-top: 65px;
-    margin-right: -232px;*/
+    margin-top: 8px;
 }
 
 .bottom-container {
@@ -141,33 +142,40 @@
     border: 1px solid black;
 }
 
+.inside-container {
+    width: 450px;
+    height: 120px;
+    margin: 0 auto;
+}
+
 .last-left {
-    width: 19%;
-    height: 80%;
+    width: 220px;
+    height: 100px;
     background-color: gray;
     border: 1px solid black;
-    float: left;
     margin-top: 10px;
-    margin-left: 350px;
+}
+
+.container {
+    width: 220px;
+    height: 120px;
+    float: right;
+    margin-top: -101px;
 }
 
 .top-right {
-    width: 19%;
-    height: 35%;
-    float: left;
+    width: 220px;
+    height: 45px;
     background-color: gray;
     border: 1px solid black;
-    margin-top: 10px;
-    margin-left: 10px;
 }
 
 .bottom-right {
-    width: 19%;
-    height: 35%;
+    width: 220px;
+    height: 45px;
     background-color: gray;
     border: 1px solid black;
-    float: left;
     margin-top: 9px;
-    margin-right: 160px;
-    margin-left: 10px;
 }
+
+
