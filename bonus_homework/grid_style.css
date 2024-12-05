@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    background-color: beige;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 200px 100px 150px;
+    height: 100vh;
+    text-align: center;
+    grid-template-areas:
+"headercell headercell headercell"
+"yellfeaturecell purplefeaturecell pinkfeaturecell"
+"singupcell singupcell singupcell"
+"contentcell contentcell contentcell";
+}
+
+.item {
+    border: 1px solid black;
+}
+
+.header {
+    grid-area: headercell;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    margin: 0 40px;
+}
+
+a {
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.yell_feature {
+    grid-area: yellfeaturecell;
+    background-color: #f8f85c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.purple_feature {
+    grid-area: purplefeaturecell;
+    background-color: #ea51ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pink_feature {
+    grid-area: pinkfeaturecell;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sing_up {
+    grid-area: singupcell;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    grid-area: contentcell;
+    background-color: #f3ce8b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 100px 150px 150px;
+        grid-template-areas:
+"headercell headercell"
+"contentcell contentcell"
+"singupcell yellfeaturecell"
+"pinkfeaturecell purplefeaturecell";
+    }
+
+    .header {
+        grid-area: headercell;
+        font-size: 15px;
+    }
+
+    .content {
+        grid-area: contentcell;
+    }
+
+    .sing_up {
+        grid-area: singupcell;
+    }
+
+    .yell_feature {
+        grid-area: yellfeaturecell;
+    }
+
+    .pink_feature {
+        grid-area: pinkfeaturecell;
+    }
+
+    .purple_feature {
+        grid-area: purplefeaturecell;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr repeat(4, 80px);
+        grid-template-areas:
+"headercell"
+"contentcell"
+"singupcell"
+"yellfeaturecell"
+"pinkfeaturecell"
+"purplefeaturecell";
+    }
+
+    .header {
+        grid-area: headercell;
+        font-size: 10px;
+    }
+
+    .content {
+        grid-area: contentcell;
+    }
+
+    .sing_up {
+        grid-area: singupcell;
+    }
+
+    .yell_feature {
+        grid-area: yellfeaturecell;
+    }
+
+    .pink_feature {
+        grid-area: pinkfeaturecell;
+    }
+
+    .purple_feature {
+        grid-area: purplefeaturecell;
+    }
+}
