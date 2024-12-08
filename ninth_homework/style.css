@@ -1,0 +1,149 @@
+:root {
+    --main-color: #34547A;
+    --secondary-color: #EEEFF1;
+    --main-text-color: #727272;
+    --text-spacing: 0.1em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    width: 1150px;
+    padding-inline: 20px;
+    margin-inline: auto;
+    padding-block: 100px;
+}
+
+header {
+    background-color: var(--secondary-color);
+}
+
+.header .container {
+    padding-block: 0 141px;
+}
+
+.menu__list {
+    display: flex;
+    gap: 42px;
+    margin-block: 0;
+    padding-block: 80px;
+    padding-inline: 0;
+}
+
+.menu__item {
+    list-style-type: none;
+}
+
+.menu__item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 400;
+    letter-spacing: var(--text-spacing);
+}
+
+.menu__item a:hover {
+    color: #727272;
+}
+
+.description h1 {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.description__content {
+    font-size: 16px;
+    color: var(--main-text-color);
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    max-width: 540px;
+    margin: 0;
+    padding-bottom: 65px;
+}
+
+.description_button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    letter-spacing: var(--text-spacing);
+    text-transform: uppercase;
+    padding-inline: 41px;
+    padding-block: 25px 20px;
+}
+
+.light_block {
+    width: 540px;
+    margin-inline: auto;
+    padding-bottom: 57px;
+}
+
+.light_block__hed {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-block: 12px;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.light_block__text {
+    text-align: center;
+    margin: 0;
+    padding-top: 38px;
+    font-size: 16px;
+    color: var(--main-text-color);
+    line-height: 26px;
+    letter-spacing: 0.05em;
+}
+
+.blue-container {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.works {
+    display: flex;
+    gap: 49px;
+}
+
+.works__item {
+    width: 141px;
+    height: 50px;
+    background: left no-repeat url(project.svg);
+    padding-left: 70px;
+    font-size: 21px;
+    line-height: 25px;
+}
+
+.works__projects {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: white;
+    line-height: 26px;
+}
+
+.copyright {
+    padding-block: 50px;
+}
+
+.copyright_name {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 24px;
+    padding-bottom: 20px;
+}
+
+.copyright_date {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+}
