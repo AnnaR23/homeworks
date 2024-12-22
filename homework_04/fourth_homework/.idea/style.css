@@ -1,0 +1,56 @@
+p {
+    background-color: lightblue;
+}
+
+div h2 {
+    background-color: gray;
+}
+
+div > p {
+    background-color: lightpink;
+}
+
+.container {
+    background-color: blueviolet;
+    font-weight: bold;
+    color: white;
+}
+
+input[type="text"] {
+    border: 2px solid blue;
+    background-color: yellow;
+    padding: 5px;
+    width: 75%;
+}
+
+#uniqueParagraph {
+    background-color: aqua;
+    color: blue;
+    font-weight: bold;
+}
+
+h3::first-letter {
+    color: greenyellow;
+    font-size: 200%;
+}
+
+div.box.special {
+    background-color: aquamarine;
+}
+
+a[href = "https://google.com"] {
+    color: orange;
+    font-weight: bold;
+}
+
+div.content > p.text {
+    background-color: khaki;
+    color: indigo;
+    font-weight: bold;
+}
+
+div.section > p.aside#first[data-role="boss"] {
+    background-color: springgreen;
+    color: darkcyan;
+    font-weight: bold;
+}

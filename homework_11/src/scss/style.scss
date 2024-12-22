@@ -1,0 +1,15 @@
+@use "common";
+@use "normalize";
+@use "header";
+@use "main";
+@use "footer";
+@use "variables" as *;
+@use "mixins" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font;
+}

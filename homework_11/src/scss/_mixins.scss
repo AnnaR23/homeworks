@@ -1,0 +1,46 @@
+
+@mixin minwidth($breakpoint) {
+
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+.container {
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+}
+
+iframe {
+  width: 100%;
+  height: 56.25vw;
+}
+
+@include minwidth(769px) {
+  .container {
+    max-width: 70%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  iframe {
+    max-width: 100%;
+    height: 26.25vw;
+  }
+
+  .blue-container {
+    width: 100%;
+  }
+}
+
+@include minwidth(1150px) {
+  .container {
+    max-width: 1160px;
+    align-items: center;
+  }
+  iframe {
+    max-width: 100%;
+    height: 56.25vw;
+  }
+}

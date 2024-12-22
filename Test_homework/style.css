@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: honeydew;
+    padding-top: 100px;
+}
+.container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    animation: moveBlock 10s linear infinite;
+}
+
+.stop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.yellow {
+    background-color: yellow;
+}
+.blue {
+    background-color: lightblue;
+}
+.green {
+    background-color: lightgreen;
+}
+.pink {
+    background-color: lightpink;
+}
+.violet {
+    background-color: violet;
+}
+
+@keyframes moveBlock {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-750px);
+    }
+}
+.content:hover {
+    animation-play-state: paused;
+}

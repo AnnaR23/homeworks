@@ -35,7 +35,7 @@ body {
 
     iframe {
         max-width: 100%;
-        height: 56.25vw /*429px;*/
+        height: 26.25vw /*429px;*/
     }
     .blue-container {
         width: 100%;
@@ -142,6 +142,7 @@ header {
     font-weight: 500;
     font-size: 2em /*32px*/;
 }
+
 
 .light_block__text {
     text-align: center;

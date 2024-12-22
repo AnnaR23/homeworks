@@ -1,0 +1,74 @@
+@use "variables" as *;
+
+.container {
+  width: 100%;
+  padding-inline: 20px;
+  margin-inline: auto;
+  padding-block: 100px;
+}
+
+.header {
+  background-color: $secondary-color;
+  align-items: center;
+
+  .container {
+    padding-block: 0 141px;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 42px;
+    margin-block: 0;
+    padding-block: 80px;
+    padding-inline: 0;
+  }
+
+  &__item {
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: black;
+      font-weight: 400;
+      letter-spacing: $text-spacing;
+
+      &:hover {
+        color: #727272;
+      }
+    }
+  }
+}
+
+.description {
+  h1 {
+    padding-top: 5rem;
+    padding-bottom: 3.75rem;
+    font-size: 3em;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__content {
+    font-size: 1em;
+    color: $main-text-color;
+    line-height: 1.6em;
+    letter-spacing: 0.05em;
+    max-width: 33.8em;
+    margin: 0;
+    padding-bottom: 4em;
+  }
+
+  &_button {
+    background-color: $main-color;
+    color: white;
+    border: none;
+    letter-spacing: $text-spacing;
+    text-transform: uppercase;
+    padding-inline: 41px;
+    padding-block: 25px 20px;
+  }
+}

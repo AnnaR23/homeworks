@@ -1,0 +1,59 @@
+@use "variables" as *;
+
+.light_block {
+  max-width: 540px;
+  margin-inline: auto;
+  padding-bottom: 57px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &__hed {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-block: 12px;
+    font-weight: 500;
+    font-size: 32px;
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0;
+    padding-top: 38px;
+    font-size: 16px;
+    color: $main-text-color;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.blue-container {
+  background-color: $main-color;
+  color: white;
+}
+
+.works {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-inline: 20px;
+  padding-block: 100px;
+
+  &__item {
+    flex-direction: column;
+    max-width: 141px;
+    background: left no-repeat url(../../assets/images/project.svg);
+    padding-left: 70px;
+    font-size: 21px;
+    line-height: 25px;
+
+    span {
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      color: white;
+      line-height: 26px;
+    }
+  }
+}
+
