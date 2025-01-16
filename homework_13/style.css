@@ -1,0 +1,32 @@
+
+.square {
+    stroke-width: 5;
+    stroke: darkred;
+    fill: hotpink;
+}
+
+svg:hover .square {
+    fill: aquamarine;
+    stroke: navy;
+}
+
+.circle {
+    stroke: orange;
+    stroke-width: 5;
+    fill: lightgreen;
+    transition: 1s;
+}
+
+svg:hover .circle {
+    fill: blueviolet;
+    stroke: lawngreen;
+}
+
+.ellipse {
+    fill: dimgray;
+    stroke: red;
+    stroke-width: 5;
+}
+
+
+

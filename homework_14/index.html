@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>макет з використанням Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="bg-info">
+  <div class="container-fluid overflow blue mb-3">
+    <div class="row mt-2 mb-4">
+      <div class="text-center col-12">
+        <img class="logo" src="images/free-icon-planet.png" alt="logo">
+        <b>NATURE PROTECTION AND RESTORATION</b>
+        <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                     aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="row  mb-3">
+  <div class="p-0 col-12 col-md-4 col-lg-3 ">
+    <div class="blue p-3">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/eduard-delputte-24KjcVimqrw-unsplash.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/eric-muhr-OB8k_fZGC4Q-unsplash%20(1).jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/gabe-pierce-nAgS8ACVgmE-unsplash.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/joyce-g-d4fo26jGvlw-unsplash.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="p-0 px-lg-3 col-12 col-md-8 col-lg-6">
+    <div class="blue p-3">
+
+      <div class="container mt-4">
+        <div class="accordion" id="accordionExample">
+          <!-- Первый элемент аккордеона -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                      aria-expanded="true" aria-controls="collapseOne">
+                Press releases and articles
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                European nature is not in a good state, and it has shown few signs of improvement over the past years.
+                According to European Environment Agency’s (EEA) briefing, published today, restoration efforts and
+                better ongoing management of ecosystems are needed to safeguard a range of benefits delivered by a
+                healthy nature — to people’s health, food security and effective climate action.
+                <button class="btn btn-info mt-2">Close</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Второй элемент аккордеона -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Publications
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                The importance of restoring nature in Europe
+                Impacts of air pollution on ecosystems
+                EEA Signals 2021: Europe’s nature
+                State of nature in the EU
+                Management effectiveness in the EU's Natura 2000 network of protected areas
+                <button class="btn btn-info mt-2">Close</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Третий элемент аккордеона -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Indicators
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Woody landscape features on agricultural land in Europe
+                Common bird index in Europe
+                Ecological status of surface waters in Europe
+                Conservation status of species under the EU Habitats Directive
+                Nationally designated terrestrial protected areas in Europe
+                <button class="btn btn-info mt-2">Close</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Четвертый элемент аккордеона -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Maps and charts
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                European protected sites<br>
+                Natura 2000 data viewer<br>
+                Emerald data viewer
+                <button class="btn btn-info mt-2">Close</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Пятый элемент аккордеона -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Frequently asked questions
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                What is biodiversity and why is it important to preserve it?
+                What is the status of biodiversity in my country?
+                How is the EU helping to protect natural areas and biodiversity?
+                How can we protect our marine environment?
+                <button class="btn btn-info mt-2">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      <div class="p-0 col-12 col-md-0 col-lg-3">
+        <div class="blue p-3">
+          <b>Solutions for restoring Europe’s agricultural ecosystems</b><br>
+          This EEA briefing presents evidence-based examples of key options available to farmers to help restore
+          Europe’s ecosystems and enhance the ability of the agricultural sector to cope with increasing climate
+          change impacts like droughts and floods as well as boosting productivity.
+          The study says introducing some key agricultural practices can prove to be a win-win for both farmers and
+          local nature, delivering better resilience and restoring local ecosystems like grasslands, hedgerows or
+          creeks.
+        </div>
+      </div>
+</div>
+
+  <div class="card text-center">
+    <div class="card-header bg-light">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="true" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body blue">
+      <h5 class="card-title">European Environment Agency</h5>
+      <p class="card-text">Information and Observation Network</p>
+      <a href="#" class="btn btn-primary">TOP</a>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+          crossorigin="anonymous">
+
+  </script>
+
+</body>
+</html>
