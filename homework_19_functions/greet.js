@@ -15,7 +15,7 @@
 
 function greet(msg, name) {
     //return 'your code here'
-return msg + ',' + name;
+return `${msg}, ${name};`
 }
 console.log(greet('Hi', 'John')); // Hi, John
 console.log(greet('Hey', 'Bob')); // Hey, Bob
