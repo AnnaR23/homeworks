@@ -4,10 +4,10 @@ console.log('Arrays and Objects');
 
 
 //array
-let room = ['cupboard', 'bed', 'table', 'chair'];
-console.log(room);
-console.log(room[3]);
-console.log(room[0]);
+let thingsInsideRoom = ['cupboard', 'bed', 'table', 'chair'];
+console.log(thingsInsideRoom);
+console.log(thingsInsideRoom[3]);
+console.log(thingsInsideRoom[0]);
 
 //array
 let flowers = ['Kalanchoe', 'Orchid', 'Begonia', 'Cyclamen'];
