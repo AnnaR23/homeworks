@@ -14,12 +14,12 @@ console.log('#3. JavaScript homework example file')
  * age - будь-який вік, число
  */
 
-let persone = {
-    FirstName : 'Tom',
-    LastName : 'Cruise',
+let userObj = {
+    firstName : 'Tom',
+    lastName : 'Cruise',
     age : 62,
 }
-console.log(persone);
+console.log(userObj);
 
 // console.log(userObj)
 
@@ -33,8 +33,16 @@ console.log(persone);
  * userObj.lastName  ← 'Smith'
  * userObj.fullName() → 'John Smith'.
  */
-
+userObj.fullName = function () {
+    return `${this.firstName} ${this.lastName}`;
+}
 // console.log(userObj.fullName()) // John Smith
+console.log(userObj.fullName());
+
+
+
+
+
 
 /*
  * #3
@@ -45,9 +53,17 @@ console.log(persone);
  *
  * При виконанні завдання не використовуйте оператор if, потрібен розв'язок із логічним оператором ||.
  */
-
+function defUpperStr(text) {
+    return (text || 'default text').toUpperCase();
+}
 // console.log(defUpperStr('My text')) // MY TEXT
 // console.log(defUpperStr())             // DEFAULT TEXT
+console.log(defUpperStr('My text'));
+console.log(defUpperStr());
+
+
+
+
 
 /*
  * #4
@@ -65,7 +81,17 @@ console.log(persone);
  * evenFn(15) → [2, 4, 6, 8, 10, 12, 14]
  * evenFn(20) → [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
  */
+function evenFn(n) {
+    const arr = [];
+    for (let i = 2; i<= n; i+=2) {
+            arr[arr.length] = i;
+    }
+return arr;
+}
 
+console.log(evenFn(10));
+console.log(evenFn(15));
+console.log(evenFn(20));
 // console.log(evenFn(10)) // [2, 4, 6, 8, 10]
 // console.log(evenFn(15)) // [2, 4, 6, 8, 10, 12, 14]
 // console.log(evenFn(20)) // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
@@ -87,12 +113,52 @@ console.log(persone);
  * У реалізації функції обов'язково мають бути використані оператори switch / case / default.
  */
 
+
+
+
+
+
+function weekFn(n) {
+    if (n < 1 || n > 7 || !Number.isInteger(n)) {
+        return null;
+}
+    switch (n){
+        case 1:
+            return 'Понеділок';
+        case 2:
+            return 'Вівторок';
+        case 3:
+            return 'Середа';
+        case 4:
+            return 'Четвер';
+        case 5:
+            return 'П\'ятниця';
+        case 6:
+            return 'Субота';
+        case 7:
+            return 'Неділя';
+        default:
+            return null;
+    }
+}
+ console.log(weekFn(1))   // 'Понеділок'
+ console.log(weekFn(3))   // 'Середа'
+ console.log(weekFn(7))   // 'Неділя'
+ console.log(weekFn(9))   // null
+ console.log(weekFn(1.5)) // null
+ console.log(weekFn('2'))
+
 // console.log(weekFn(1))   // 'Понеділок'
 // console.log(weekFn(3))   // 'Середа'
 // console.log(weekFn(7))   // 'Неділя'
 // console.log(weekFn(9))   // null
 // console.log(weekFn(1.5)) // null
 // console.log(weekFn('2')) // null
+
+
+
+
+
 
 /*
  * #6
@@ -110,26 +176,35 @@ console.log(persone);
  * При виконанні завдання допускається використовувати тільки тернарний оператор ?.
  * Використання операторів if, switch - заборонено.
  */
+function ageClassification(n) {
+    return n <= 0 || n > 122 ? null:
+            n <= 24 ? 'Дитинство':
+            n <= 44 ? 'Молодість':
+            n <= 65 ? 'Зрілість':
+            n <= 75 ? 'Старість':
+            n <= 90 ? 'Довголіття':
+            n <=122 ? 'Рекорд': null;
+}
 
-// console.log('    -1 :', ageClassification(-1)) // -1 : null
-// console.log('     0 :', ageClassification(0)) // 0 : null
-// console.log('     1 :', ageClassification(1)) // 1 : Дитинство
-// console.log('    24 :', ageClassification(24)) // 24 : Дитинство
-// console.log(' 24.01 :', ageClassification(24.01)) // 24.01 : Молодість
-// console.log('    44 :', ageClassification(44)) // 44 : Молодість
-// console.log(' 44.01 :', ageClassification(44.01)) // 44.01 : Зрілість
-// console.log('    65 :', ageClassification(65)) // 65 : Зрілість
-// console.log('  65.1 :', ageClassification(65.1)) // 65.1 : Старість
-// console.log('    75 :', ageClassification(75)) // 75 : Старість
-// console.log(' 75.01 :', ageClassification(75.01)) // 75.01 : Довголіття
-// console.log('    90 :', ageClassification(90)) // 90 : Довголіття
-// console.log(' 90.01 :', ageClassification(90.01)) // 90.01 : Рекорд
-// console.log('   122 :', ageClassification(122)) // 122 : Рекорд
-// console.log('122.01 :', ageClassification(122.01)) // 122.01 : null
-// console.log('   150 :', ageClassification(150)) // 150 : null
+ console.log('    -1 :', ageClassification(-1)) // -1 : null
+ console.log('     0 :', ageClassification(0)) // 0 : null
+ console.log('     1 :', ageClassification(1)) // 1 : Дитинство
+ console.log('    24 :', ageClassification(24)) // 24 : Дитинство
+ console.log(' 24.01 :', ageClassification(24.01)) // 24.01 : Молодість
+ console.log('    44 :', ageClassification(44)) // 44 : Молодість
+ console.log(' 44.01 :', ageClassification(44.01)) // 44.01 : Зрілість
+ console.log('    65 :', ageClassification(65)) // 65 : Зрілість
+ console.log('  65.1 :', ageClassification(65.1)) // 65.1 : Старість
+ console.log('    75 :', ageClassification(75)) // 75 : Старість
+ console.log(' 75.01 :', ageClassification(75.01)) // 75.01 : Довголіття
+ console.log('    90 :', ageClassification(90)) // 90 : Довголіття
+ console.log(' 90.01 :', ageClassification(90.01)) // 90.01 : Рекорд
+ console.log('   122 :', ageClassification(122)) // 122 : Рекорд
+ console.log('122.01 :', ageClassification(122.01)) // 122.01 : null
+ console.log('   150 :', ageClassification(150)) // 150 : null
 
-/*
- Блок тестирования, везде должны быть true:
+
+ //Блок тестирования, везде должны быть true:
  console.log('    -1 :', ageClassification(-1) === null); // -1 : null
  console.log('     0 :', ageClassification(0) === null) // 0 : null
  console.log('     1 :', ageClassification(1) === 'Дитинство'); // 1 : Дитинство
@@ -146,7 +221,8 @@ console.log(persone);
  console.log('   122 :', ageClassification(122) === 'Рекорд'); // 122 : Рекорд
  console.log('122.01 :', ageClassification(122.01) === null); // 122.01 : null
  console.log('   150 :', ageClassification(150) === null); // 150 : null
-*/
+
+
 
 /*
  * #7
@@ -164,10 +240,25 @@ console.log(persone);
  * oddFn(15) → [1, 3, 5, 7, 9, 11, 13, 15]
  * oddFn(20) → [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
  */
+function oddFn(n) {
+    const Array = [];
+    let i = 1;
 
-// console.log(oddFn(10)) // [1, 3, 5, 7, 9]
-// console.log(oddFn(15)) // [1, 3, 5, 7, 9, 11, 13, 15]
-// console.log(oddFn(20)) // [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+    while (i <= n) {
+        Array[Array.length] = i;
+        i += 2;
+    }
+        return Array;
+}
+
+ console.log(oddFn(10)); // [1, 3, 5, 7, 9]
+ console.log(oddFn(15)) // [1, 3, 5, 7, 9, 11, 13, 15]
+ console.log(oddFn(20)) // [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+
+
+
+
 
 /*
  * #8
@@ -182,17 +273,40 @@ console.log(persone);
 
 // function mainFunc(a, b, cb) { }
 
+function mainFunc(a, b, callback) {
+    if (callback && typeof callback === 'function') {
+        callback(a, b);
+    } else {
+        console.log(false);
+    }
+}
+
 /*
  * Реалізуйте callback функції (cbRandom, cbPow, cbAdd) до основної функції (mainFunc), що повертатимуть відповідні результати обчислень.
  * Використовуйте Math для піднесення до ступеня (Math.pow) та генерації випадкових чисел (Math.floor, Math.random).
  */
-
+function cbRandom(a, b) {
+    const randomNum = Math.floor(Math.random() * (b - a + 1 ))+ a;
+    console.log(randomNum);
+}
 // cbRandom(a, b) - обчислює і повертає довільне ціле число в діапазоні між a і b включно.
 // function cbRandom(min, max) { }
 
+
+
+function cbPow(a, b) {
+    const PowNum = Math.pow(a, b);
+    console.log(PowNum);
+}
 // cbPow(a, b) - обчислює і повертає результат піднесення числа a у ступінь b.
 // function cbPow(num, pow) { }
 
+
+
+function cbAdd(a, b) {
+    const AddSum = a + b;
+    console.log(AddSum);
+}
 // cbAdd(a, b) - обчислює і повертає суму двох чисел a і b.
 // function cbAdd(a, b) { }
 
@@ -209,4 +323,8 @@ console.log(persone);
 // console.log(mainFunc(2, 5, cbPow)) // 32
 // console.log(mainFunc(2, 5, cbAdd)) // 7
 // console.log(mainFunc(2, 5, 'not a func')) // false
-
+mainFunc(2,5, cbRandom);
+mainFunc(10, 30, cbRandom);
+mainFunc(2, 5, cbPow);
+mainFunc(2, 5, cbAdd);
+mainFunc(2, 5, 'not a func');
