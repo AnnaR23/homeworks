@@ -176,15 +176,35 @@ function weekFn(n) {
  * При виконанні завдання допускається використовувати тільки тернарний оператор ?.
  * Використання операторів if, switch - заборонено.
  */
-function ageClassification(n) {
-    return n <= 0 || n > 122 ? null:
+/*function ageClassification(n) {
+  return n <= 0 || n > 122 ? null:
             n <= 24 ? 'Дитинство':
             n <= 44 ? 'Молодість':
             n <= 65 ? 'Зрілість':
             n <= 75 ? 'Старість':
             n <= 90 ? 'Довголіття':
             n <=122 ? 'Рекорд': null;
+}*/
+
+function ageClassification(n) {
+    if (n <= 0 || n > 122) {
+        return null;
+    } else if (n <= 24) {
+        return 'Дитинство';
+    } else if (n <= 44) {
+        return 'Молодість';
+    } else if (n <= 65) {
+        return 'Зрілість';
+    } else if (n <= 75) {
+        return 'Старість';
+    } else if (n <= 90) {
+        return 'Довголіття';
+    } else if (n <= 122) {
+        return 'Рекорд';
+    }
+    return null;
 }
+
 
  console.log('    -1 :', ageClassification(-1)) // -1 : null
  console.log('     0 :', ageClassification(0)) // 0 : null
@@ -241,11 +261,11 @@ function ageClassification(n) {
  * oddFn(20) → [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
  */
 function oddFn(n) {
-    const Array = [];
+    const result = [];
     let i = 1;
 
     while (i <= n) {
-        Array[Array.length] = i;
+        result[result.length] = i;
         i += 2;
     }
         return Array;
