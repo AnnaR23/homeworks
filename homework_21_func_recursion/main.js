@@ -52,21 +52,22 @@ function average(mixed) {
 // кожна цифра у своєму рядку
 // Заборонено використовувати for та [].flat()
 
-function showDeepArray(deep = 0, array) {
-if (!Array.isArray(array)) {
-    return;
-}
+function showDeepArray(array) {
+    if (!Array.isArray(array)) {
+        return;
+    }
+
     array.forEach(item => {
         if(typeof item === 'number') {
-            console.log(' '.repeat(deep), item);
+            console.log(item);
         } else {
-          showDeepArray(deep + 1, item);
+          showDeepArray(item);
         }
     })
 }
 
 const myArray = [1, 2, 3, [31, 32, 33], 4, 5, 6, 7, [71, 72, [721, 722, 723, [7231, 7232, 7233], 724]], 8, 9];
-showDeepArray(undefined, myArray);
+showDeepArray(myArray);
 
 // Має вивести:
 // 1
