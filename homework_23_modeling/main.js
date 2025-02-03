@@ -1,8 +1,8 @@
 'use strict';
 
-import {Human} from "./human.js";
-import {Apartment} from "./apartment.js";
-import {House} from "./house.js";
+import {Human} from "./Human.js";
+import {Apartment} from "./Apartment.js";
+import {House} from "./House.js";
 
 /*
 #1

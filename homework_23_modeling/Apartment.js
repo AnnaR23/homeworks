@@ -1,6 +1,6 @@
 'use strict';
 
-import {Human} from './human.js';
+import {Human} from './Human.js';
 
 export class Apartment {
     residents = [];
