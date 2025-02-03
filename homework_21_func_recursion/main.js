@@ -8,7 +8,7 @@ import {generateKey} from "./functions.js";
 
 
 // #1 Реалізуйте функцію generateKey(length, characters), яка повертає рядок випадкових символів із набору characters довжиною length
-// Функцію треба покласти в файл functions.js та імпортувати за допомогою import
+// Функцію треба покласти в файл human.js та імпортувати за допомогою import
 
 
 const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
