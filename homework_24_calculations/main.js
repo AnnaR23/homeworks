@@ -86,9 +86,14 @@ const users = [
 // #4 Вивести користувачів з повторюючимися іменами
 
 
+function getBalanceAsNum(balance) {
+    return parseFloat(balance.replace('$','').replace(',',''));
+}
+
+
 function usersPhone() {
     return users
-        .filter(user=> parseFloat(user.balance.replace('$','').replace(',','')) < 2000)
+        .filter(user=> getBalanceAsNum(user.balance) < 2000)
     .map(user => user.phone);
 }
 console.log(usersPhone());
@@ -97,8 +102,9 @@ console.log(usersPhone());
 
 function usersBalance() {
     return users
-        .map(user => user.balance.replace('$', '').replace(',',''))
-        .reduce((sum,balance) => sum + parseFloat(balance), 0);
+        .map(user => getBalanceAsNum(user.balance))
+        .reduce((sum,balance) => sum + balance, 0)
+        .toFixed(2);
 }
 console.log(usersBalance());
 
@@ -107,7 +113,7 @@ console.log(usersBalance());
 function maxBalance() {
     return users
         .reduce((maxUser, user) => {
-            let userBalance = parseFloat(user.balance.replace('$', '').replace(',', ''));
+            let userBalance = getBalanceAsNum(user.balance);
             if (userBalance > maxUser.balance) {
                 return {user, balance: userBalance};
             }
@@ -119,7 +125,23 @@ console.log(maxBalance());
 
 
 
+
+
 function findDuplicateNames(users) {
-    return users.filter((user, index, self) => self.findIndex(i => i.name === user.name) !== index);
+    const names = users.map(user => user.name);
+    const duplicates = [];
+
+    names.forEach((name, index) => {
+        const count = names.filter(n => n === name).length;
+
+        if (count > 1 && !duplicates.includes(name)) {
+            for (let i = 0; i < count; i++) {
+                duplicates.push(name);
+            }
+        }
+    });
+
+    return duplicates;
 }
+
 console.log(findDuplicateNames(users));
