@@ -126,22 +126,11 @@ console.log(maxBalance());
 
 
 
+const nameCounts = users.reduce((acc,user) => {
+    acc[user.name] = (acc[user.name] || 0) + 1;
+    return acc;
+}, {});
 
-function findDuplicateNames(users) {
-    const names = users.map(user => user.name);
-    const duplicates = [];
+const duplicateUsers = users.filter(user => nameCounts[user.name] > 1);
 
-    names.forEach((name, index) => {
-        const count = names.filter(n => n === name).length;
-
-        if (count > 1 && !duplicates.includes(name)) {
-            for (let i = 0; i < count; i++) {
-                duplicates.push(name);
-            }
-        }
-    });
-
-    return duplicates;
-}
-
-console.log(findDuplicateNames(users));
+console.log(duplicateUsers);
