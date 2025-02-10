@@ -17,7 +17,7 @@ export function setLocalStorageInfo(key, value, timeout) {
         setTimeout(() => {
             localStorage.removeItem(key);
             console.log(`Data with key ${key} was deleted from localStorage after ${timeout} seconds.`);
-        }, timeout * 100);
+        }, timeout * 1000);
     }
 }
 
