@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: 10% 1fr 10%;
     grid-template-rows: 1fr;
+    max-width: 800px;
 }
 
 .image {
