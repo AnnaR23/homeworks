@@ -98,19 +98,3 @@ img {
     background-color: white;
     border-left: 10px solid #3cd2ed;
 }
-
-/*@media (min-width: 800px) {
-    #slider {
-        width: 100%;
-        height: 100%;
-    }
-    .image-container {
-        width: 100%;
-        height: 100%;
-    }
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}*/
