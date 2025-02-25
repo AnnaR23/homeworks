@@ -8,20 +8,26 @@ const links = [
 
 
 let currentSlide = 0;
-let slideCount = 4;
+let slideCount = links.length;
 let intervalId;
 let isPlaying = false; //флаг
 let dots = document.querySelectorAll('.dot');
-const slides = document.querySelectorAll('.slide');
+let sliderContainer = document.querySelector('.slider');
 
 
-//динамическое добавление изображений на слайды
-slides.forEach((slide, index) => {
-    const img = document.createElement("img");
-    img.src = links[index];
+//динамическое создание слайдов
+links.forEach((link, index) => {
+    const slide = document.createElement('div');//создает слайд
+    slide.classList.add('slide');
+
+    const img = document.createElement('img');//создает изображение
+    img.src = link;
     img.alt = `Image ${index + 1}`;
-    slide.appendChild(img); //добавляет изображение в Html слайд
+
+    slide.appendChild(img); //добавляет изображение на слайд
+    sliderContainer.appendChild(slide);//добавляет слайд в контейнер
 });
+
 
 //Ф-ция для обновления активных индикаторов
 function updateDots() {
@@ -35,8 +41,8 @@ function updateDots() {
 }
 
 //Ф.ция для переключения слайдов: на след.
-function nextSlide() {
-    if (currentSlide < slideCount - 1) {
+export function nextSlide() {
+    if (currentSlide < links.length - 1) {
         currentSlide++;
     } else {
         currentSlide = 0;
@@ -45,8 +51,8 @@ function nextSlide() {
     updateDots();
 }
 
-//Ф.ция для переключения слайдов: на пред.
-function prevSlide() {
+//Ф-ция для переключения слайдов: на пред.
+export function prevSlide() {
     if (currentSlide > 0) {
         currentSlide--;
     } else {
@@ -57,7 +63,7 @@ function prevSlide() {
 }
 
 //Ф-ция для обновления позиции слайдера
-function updateSliderPosition() {
+export function updateSliderPosition() {
     const slider = document.querySelector('.slider');
     slider.style.transform = `translateX(-${currentSlide * 100}%)`; //сдвигаем слайдер влево на 100% от ширины слайда
 }
@@ -95,6 +101,7 @@ document.querySelector('.pause').addEventListener('click', function () {
 });
 
 
+//обработка кликов по индикаторам
 dots.forEach((dot, index) => {
     dot.addEventListener('click',() => {
         currentSlide = index;
