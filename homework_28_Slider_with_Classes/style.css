@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    max-width: 800px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s;/* плавное перемещение элем.*/
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);/*сдвигает елем. на половину его высоты вверх*/
+    background-color: darkslategrey;
+    color: white;
+    padding: 5px;
+    font-size: 40px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.play, .pause {
+    background-color: lightgrey;
+    border-radius: 30px;
+    border: 1px solid darkslategrey;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px 15px;
+    z-index: 20;
+    position: relative;
+}
+
+.active {
+    background-color: blue;
+    color: white;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid darkslategrey;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot:hover {
+    background-color: darkslategrey;
+    transform: scale(1.33);
+}
+.dot.active {
+    background-color: darkslategrey;
+    transform: scale(1.33);
+}
