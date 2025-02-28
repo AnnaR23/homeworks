@@ -1,4 +1,4 @@
-import { Slider } from "./Slider.js";
+import {Slider} from "./Slider.js";
 
 //массив(содержит пути к изображениям)
 const images = [
@@ -8,7 +8,7 @@ const images = [
     "images/snow-mountain.jpg",
 ];
 
-const slider = new Slider(images, 1500);// изменен интервал на 1,5сек
+const slider = new Slider(images, 1500, 'slider1');// изменен интервал на 1,5сек
 
 
 

@@ -14,10 +14,10 @@ export class Slider {
 
 
 //Конструктор класса Slider.
-    constructor(images, interval = 2000) {
+    constructor(images, interval = 2000, slider1) {
 //Проверяет, что images является массивом и не пустой.
         if (!Array.isArray(images) || images.length === 0) {
-            throw new Error("No images specified");
+            throw new Error('No images specified');
         }
 
 //Инициализация свойств слайдера.
@@ -27,8 +27,8 @@ export class Slider {
 
 
 //Инициализация элементов DOM.
-        this.dots = document.querySelectorAll('.dot');
-        this.sliderContainer = document.querySelector('.slider');
+        this.dots = document.querySelectorAll('#slider1 .dot');
+        this.sliderContainer = document.querySelector('#slider1 .slider');
 
 
         this.createSlider();// создание слайдов
@@ -37,10 +37,10 @@ export class Slider {
 
 //Добавляет обработчики событий для кнопок, индикаторов и наведения мыши.
     addEventListeners() {
-        document.querySelector('.next').addEventListener('click', () => this.nextSlide());
-        document.querySelector('.prev').addEventListener('click', () => this.prevSlide());
-        document.querySelector('.play').addEventListener('click', () => this.startAutoSlide());
-        document.querySelector('.pause').addEventListener('click', () => this.stopAutoSlide());
+        document.querySelector('#slider1 .next').addEventListener('click', () => this.nextSlide());
+        document.querySelector('#slider1 .prev').addEventListener('click', () => this.prevSlide());
+        document.querySelector('#slider1 .play').addEventListener('click', () => this.startAutoSlide());
+        document.querySelector('#slider1 .play').addEventListener('click', () => this.stopAutoSlide());
 
 //Обработчики для индикаторов.
         this.dots.forEach((dot, index) => {
@@ -127,8 +127,8 @@ export class Slider {
         if (!this.isPlaying) {
             this.intervalId = setInterval(() => this.nextSlide(), this.interval);
             this.isPlaying = true;
-            document.querySelector('.play').classList.add('active');
-            document.querySelector('.pause').classList.remove('active');
+            document.querySelector('#slider1 .play').classList.add('active');
+            document.querySelector('#slider1 .pause').classList.remove('active');
         }
     }
 
@@ -138,8 +138,8 @@ export class Slider {
         if (this.isPlaying) {
             clearInterval(this.intervalId);
             this.isPlaying = false;
-            document.querySelector('.pause').classList.add('active');
-            document.querySelector('.play').classList.remove('active');
+            document.querySelector('#slider1 .pause').classList.add('active');
+            document.querySelector('#slider1 .play').classList.remove('active');
         }
     }
 }
