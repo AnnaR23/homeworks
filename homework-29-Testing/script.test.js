@@ -4,7 +4,7 @@ import { ageClassification, weekFn } from "./script.js";
 describe("function ageClassification", () => {
 
     it("should return null for age < 0", () => {
-        expect(ageClassification(-1)).toBe(null);
+        expect(ageClassification(-1)).toBeNull();
     });
 
     it("should return 'Дитинство' for age = 0", () => {
