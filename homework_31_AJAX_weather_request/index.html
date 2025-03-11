@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather request</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Check the weather</h1>
+<input type="text" id="city" placeholder="Enter city name">
+<button id="get-weather">Weather</button>
+
+<div id="error-message"></div>
+<div id="weather-info" class="hidden">
+
+  <h3>Weather in the city:</h3>
+  <p>Temperature:<span id="temp"></span> °C</p>
+  <p>Pressure:<span id="pressure"></span> hPa</p>
+  <p>Description:<span id="description"> </span></p>
+  <p>Humidity:<span id="humidity"></span> %</p>
+  <p>Wind speed:<span id="speed"></span> m/s</p>
+  <p>Wind direction in degrees:<span id="deg"> </span>°</p>
+  <img id="weather-icon" src="" alt="weather-icon">
+</div>
+
+<div id="processing" class="hidden">Processing...</div>
+
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
