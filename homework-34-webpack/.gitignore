@@ -1,0 +1,14 @@
+### Custom .gitignore template
+# Folders
+.idea/
+.vscode/
+node_modules/
+dist/
+build/
+cd
+# Files
+.DS_Store
+*.log
+*.js.map
+*.d.ts
+.env
