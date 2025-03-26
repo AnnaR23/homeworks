@@ -1,0 +1,27 @@
+@import "fonts.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    color: #1818e8;
+}
+.logo {
+   background-image: url('../assets/icon-square-big.png');
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+}
+.some-img {
+    width: 50px;
+}
+.container {
+    font-family: "Agbalumo", sans-serif;
+}
+
+
+
+
+
