@@ -1,6 +1,7 @@
 // получаем элементы
-let searchInput = document.getElementById('searchInput') as HTMLInputElement | null
-let resultsContainer = document.getElementById('results') as HTMLElement | null
+// @ts-ignore
+let searchInput: HTMLInputElement | null = document.getElementById('searchInput')
+let resultsContainer: HTMLElement | null = document.getElementById('results')
 
 
 let debounceTimeout: number
