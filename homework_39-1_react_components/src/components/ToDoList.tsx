@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import TaskItem from './TaskItem'
+import ToDoItem from './ToDoItem.tsx'
 
 // Stateful component
 
@@ -30,9 +30,9 @@ const ToDoList: React.FC = () => {
     <div>
       <h1>Shopping list</h1>
       <ul>
-        {/* Рендерим задачи с передачей их в компонент TaskItem*/}
+        {/* Рендерим задачи с передачей их в компонент ToDoItem*/}
         {tasks.map(task => (
-          <TaskItem
+          <ToDoItem
             key={task.id}
             task={task}
             toggleTaskCompletion={toggleTaskCompletion}
