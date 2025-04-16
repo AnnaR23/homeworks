@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.active {
+ font-weight: bold;
+  color: #1818e8;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
