@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import UserContext from '../UserContext.jsx';
-import UserItem from './UserItem';
+import UserItem from './UserItem.jsx';
 
 function UserList() {
   // получаем данные из контекста (все пользователи). Второй уровень.
