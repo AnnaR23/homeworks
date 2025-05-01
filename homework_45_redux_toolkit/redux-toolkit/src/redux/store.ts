@@ -2,10 +2,10 @@ import { configureStore } from '@reduxjs/toolkit';
 import userReducer from './userSlice';
 
 
-//создание store
+//создание Redux store с использованием Redux Toolkit
 export const store = configureStore({
   reducer: {
-    users: userReducer,
+    users: userReducer, // подключаем редьюсер пользователей
   },
 });
 

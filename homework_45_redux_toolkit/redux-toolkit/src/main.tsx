@@ -6,7 +6,7 @@ import App from './App.tsx';
 import { store } from './redux/store';
 
 
-//рендерим приложение и оборачиваем в Provider для доступа в store
+// подключаем Redux store через Provider и рендерим приложение
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
