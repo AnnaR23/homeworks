@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux' // для получен�
 import { RootState } from '../redux/store' // тип RootState для правильной работы useSelector
 import { v4 as uuidv4 } from 'uuid'
 import { User } from '../redux/userReducer.ts'
+import { ActionTypes } from '../redux/actionTypes.ts'
 import UserItem from './UserItem.tsx'
 
 
@@ -16,7 +17,7 @@ function UserList() {
 
   // загружаем пользователей при первом рендере компонента
   useEffect(() => {
-    dispatch({ type: 'FETCH_USERS_REQUEST' }) // запрос на получение пользователей
+    dispatch({ type: ActionTypes.FETCH_USERS_REQUEST }) // запрос на получение пользователей
   }, [dispatch])
 
   // функция для добавления нового пользователя
@@ -25,14 +26,14 @@ function UserList() {
       id: uuidv4(), // генерируем уникальный id
       name: `User ${users.length + 1}`
     }
-    dispatch({ type: 'ADD_USER', payload: newUser }) // отправляем экшен добавления
+    dispatch({ type: ActionTypes.ADD_USER, payload: newUser }) // отправляем экшен добавления
   }
 
 
   return (
     <div>
       {/*кнопка для загрузки пользователей*/}
-      <button onClick={() => dispatch({ type: 'FETCH_USERS_REQUEST' })}>
+      <button onClick={() => dispatch({ type: ActionTypes.FETCH_USERS_REQUEST })}>
         {loading ? 'Loading...' : 'Fetch users'}
       </button>
 

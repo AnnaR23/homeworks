@@ -1,4 +1,5 @@
-import { AnyAction } from 'redux'
+import { ActionTypes } from './actionTypes';
+
 
 // тип для одного пользователя
 export interface User {
@@ -20,22 +21,23 @@ const initialState: UserState = {
   error: null
 }
 
+
 //редьюсер
-export const userReducer = (state = initialState, action: AnyAction): UserState => {
+export const userReducer = (state = initialState, action: any): UserState => {
   switch (action.type) {
-    case 'FETCH_USERS_REQUEST':
+    case ActionTypes.FETCH_USERS_REQUEST:
       return { ...state, loading: true, error: null } //начинаем загрузку
 
-    case 'FETCH_USERS_SUCCESS':
+    case ActionTypes.FETCH_USERS_SUCCESS:
       return { ...state, loading: false, users: action.payload } //загрузка завершена, обновляем пользователей
 
-    case 'FETCH_USERS_ERROR':
+    case ActionTypes.FETCH_USERS_ERROR:
       return { ...state, loading: false, error: action.payload } //если ошибка, сохраняем ее
 
-    case 'ADD_USER':
+    case ActionTypes.ADD_USER:
       return { ...state, users: [...state.users, action.payload] } //добавляем нового пользователя
 
-    case 'DELETE_USER':
+    case ActionTypes.DELETE_USER:
       return {
         ...state,
         users: state.users.filter(user => user.id !== action.payload)
@@ -45,5 +47,3 @@ export const userReducer = (state = initialState, action: AnyAction): UserState 
       return state
   }
 }
-
-export default userReducer

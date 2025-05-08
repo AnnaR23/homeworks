@@ -1,5 +1,5 @@
-import { useDispatch } from 'react-redux'
-
+import { useDispatch } from 'react-redux';
+import { ActionTypes } from '../redux/actionTypes.ts';
 
 // определение типа пользователя
 interface User {
@@ -17,7 +17,7 @@ function UserItem({ user }: UserItemProps) {
 
   // функция удаления пользователя
   const handleRemove = () => {
-    dispatch({ type: 'DELETE_USER', payload: user.id })
+    dispatch({ type: ActionTypes.DELETE_USER, payload: user.id })
   }
 
   return (
