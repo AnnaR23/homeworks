@@ -1,0 +1,41 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+  form {
+    width: 400px;
+    border: 1px solid darkgray;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 30px auto;
+    background-color: #eeeef1;
+  }
+
+label {
+  margin-inline: 5px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #ccc;
+ border-radius: 4px;
+  box-sizing: border-box;
+}
+
+  button {
+    background-color: #34a4ea;
+    border-radius: 4px;
+    color: #fff;
+    margin-block: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+.error {
+  color: red;
+}
+
+
+
