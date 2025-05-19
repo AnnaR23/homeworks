@@ -6,9 +6,10 @@ import '@testing-library/jest-dom'
 describe('DataTable component', () => {
   test('renders table with data', () => {
     render(<DataTable />);
+
     expect(screen.getByText('First Name')).toBeInTheDocument();
     expect(screen.getByText('Daenerys')).toBeInTheDocument();
-    expect(screen.getAllByRole('checkbox')[0]).toBeInTheDocument();
+    expect(screen.getByRole('checkbox', { name: 'Select all rows'})).toBeInTheDocument(); // используем getByRole, чтобы выбрать нужный checkbox по aria-label.
   });
 
   test('allow selecting a row via checkbox', () => {
@@ -29,4 +30,19 @@ describe('DataTable component', () => {
     // Теперь он должен быть выбран
     expect(rowCheckbox).toBeChecked();
   });
+
+  test('shows correct selection count when multiple rows are selected', () => {
+    render(<DataTable />);
+
+    // получаем все чекбоксы
+    const checkboxes = screen.getAllByRole('checkbox');
+
+    // checkbox[1] - первая строка, checkbox[2] - вторая строка
+    fireEvent.click(checkboxes[1]); // выбираем первую строку
+    fireEvent.click(checkboxes[2]); // выбираем вторую строку
+
+    // Проверяем, что появилась надпись "2 rows selected"
+    expect(screen.getByText('2 rows selected')).toBeInTheDocument();
+  });
+
 });
