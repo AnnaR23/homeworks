@@ -14,14 +14,16 @@ const server = http.createServer((req, res) => {// req = request; res = response
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
     res.end('Hello, this is my first server on Node.js');
+    return;
 
-  } else if (url === '/html' && method === 'GET') {
+  } if (url === '/html' && method === 'GET') {
     // Отдаем HTML- страницу
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
     res.end('<h1>Welcome!</h1><p>This is HTML-Page</p>');
+    return;
 
-  }else if ( url === '/json' && method === 'GET') {
+  } if ( url === '/json' && method === 'GET') {
     // Отдаем JSON - формат передачи данных как из API
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -30,13 +32,14 @@ const server = http.createServer((req, res) => {// req = request; res = response
       date: new Date().toLocaleString(), // текущее время (тип: объект Date), (.toLocaleString() - делает дату более читаемой)
     };
     res.end(JSON.stringify(data)); // превращаем объект JS в строку JSON
+    return;
+  }
 
-  } else {
     // если путь не найден
     res.statusCode = 404;
     res.setHeader('Content-Type', 'text/plain');
     res.end('Page not Found');
-  }
+
 });
 
 // запускаем сервер и слушаем порт 3000
