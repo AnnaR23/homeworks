@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import ProductPage from './pages/ProductPage'
+import ProductsPage from './pages/ProductsPage.jsx'
 import ProductDetailPage from './pages/ProductDetailPage'
 import CartPage from './pages/CartPage'
 import { CartProvider } from './contex/CartContex.jsx'
@@ -33,7 +33,7 @@ function App() {
           </nav>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/products" element={<ProductPage />} />
+            <Route path="/products" element={<ProductsPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
           </Routes>

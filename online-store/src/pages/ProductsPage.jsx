@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { getProducts } from '../services/productService.js'
 import { Link } from 'react-router-dom'
-import './ProductPage.css'
+import './ProductsPage.css'
 
 // объявляем функциональный компонент ProductPage
-const ProductPage = () => {
+const ProductsPage = () => {
   const products = getProducts() // получаем список всех товаров из productService
 // состояния для фильтрации
   const [search, setSearch] = useState('') // для поиска по названию
@@ -108,4 +108,4 @@ const ProductPage = () => {
 }
 
 
-export default ProductPage
+export default ProductsPage
