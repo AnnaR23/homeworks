@@ -7,7 +7,7 @@ export const getProducts = () => {
       name: 'Smartphone Samsung Galaxy',
       category: 'smartphones',
       price: 900,
-      image: '/images/smartphone-samsung-galaxy.jpg',
+      image: '/online-store/images/smartphone-samsung-galaxy.jpg',
       description: 'Budget and powerful smartphone'
     },
     {
@@ -15,7 +15,7 @@ export const getProducts = () => {
       name: 'Laptop Asus',
       category: 'laptops',
       price: 350,
-      image: '/images/laptop-asus.jpg',
+      image: '/online-store/images/laptop-asus.jpg',
       description: 'Laptop for work'
     },
     {
@@ -23,7 +23,7 @@ export const getProducts = () => {
       name: 'TV Samsung Smart 4K',
       category: 'televisions',
       price: 300,
-      image: '/images/tv-samsung.jpg',
+      image: '/online-store/images/tv-samsung.jpg',
       description: '4K Smart TV mit Wi-Fi and Bluetooth'
     },
     {
@@ -31,7 +31,7 @@ export const getProducts = () => {
       name: 'Acer Aspire A17-51',
       category: 'laptops',
       price: 800,
-      image: '/images/acer_aspire_A17-51.jpg',
+      image: '/online-store/images/acer_aspire_A17-51.jpg',
       description: 'Universal and functional device'
     },
     {
@@ -39,7 +39,7 @@ export const getProducts = () => {
       name: 'Dell Inspiron 15-Laptop',
       category: 'laptops',
       price: 350,
-      image: '/images/dell.avif',
+      image: '/online-store/images/dell.avif',
       description: 'A laptop for everyday use, with an elegant, sophisticated design.'
     },
     {
@@ -47,7 +47,7 @@ export const getProducts = () => {
       name: 'DYON Smart 43 VX',
       category: 'televisions',
       price: 200,
-      image: '/images/dyon.jpg',
+      image: '/online-store/images/dyon.jpg',
       description: '43-inch Full HD TV, Smart TV with Netflix, Prime Video, YouTube and integrated Wi-Fi'
     },
     {
@@ -55,7 +55,7 @@ export const getProducts = () => {
       name: 'LG OLED evo AI',
       category: 'televisions',
       price: 950,
-      image: '/images/lg_oled.avif',
+      image: '/online-store/images/lg_oled.avif',
       description: 'The LG OLED TV gives you access to a wide range of streaming services.'
     },
     {
@@ -63,7 +63,7 @@ export const getProducts = () => {
       name: 'MacBookPro 16',
       category: 'laptops',
       price: 1000,
-      image: '/images/MacBook_Pro-16.avif',
+      image: '/online-store/images/MacBook_Pro-16.avif',
       description: 'High performance, excellent screen quality and long battery life'
     },
     {
@@ -71,7 +71,7 @@ export const getProducts = () => {
       name: 'Smartphone Galaxy X10',
       category: 'smartphones',
       price: 550,
-      image: '/images/smartphone-galaxy-X10.avif',
+      image: '/online-store/images/smartphone-galaxy-X10.avif',
       description: 'The Samsung Galaxy S10\'s display has excellent dynamic range, high brightness, and decent color reproduction.'
     },
     {
@@ -79,7 +79,7 @@ export const getProducts = () => {
       name: 'TOSHIBA VIDAA Smart TV',
       category: 'televisions',
       price: 400,
-      image: '/images/toshiba.jpg',
+      image: '/online-store/images/toshiba.jpg',
       description: 'Toshiba 55UV2363DAN 55-inch TV / VIDAA Smart TV (4K UHD, Dolby Vision HDR, Triple Tuner)'
     },
     {
@@ -87,7 +87,7 @@ export const getProducts = () => {
       name: 'Xiaomi Redmi Silver',
       category: 'smartphones',
       price: 150,
-      image: '/images/xiaomi.jpg',
+      image: '/online-store/images/xiaomi.jpg',
       description: 'Xiaomi Redmi makes reading and browsing easier and reduces the need for constant zooming and scrolling'
     },
     {
@@ -95,7 +95,7 @@ export const getProducts = () => {
       name: 'Huawei Leica Vario-Summilux - Blue',
       category: 'smartphones',
       price: 200,
-      image: '/images/xuawei.jpg',
+      image: '/online-store/images/xuawei.jpg',
       description: 'Huawei\'s Leica Vario-Summilux system is designed to deliver high-quality photos and videos'
     }
   ]

@@ -24,7 +24,7 @@ function App() {
     <IdleTimerProvider timeout={1000 * 60 * 5} onIdle={handleIdle}> {/* оборачиваем приложение в IdleTimerProvider, вызываем функцию onIdle={handleIdle} если пользователь неактивен 5 мин(1000мс*60*5)*/}
       <CartProvider> {/* оборачиваем все приложение, чтобы корзина была доступна в любом компоненте */}
         <ToastContainer position="top-right" autoClose={2000} /> {/* добавляем контейнер для уведомлений (toast) */}
-        <BrowserRouter>
+        <BrowserRouter basename="online-store">
           {/* nav-бар со ссылками на страницы, Link - чтобы не происходила перезагрузка стр. */}
           <nav style={{ padding: '10px', borderBottom: '1px solid #ccc' }}>
             <Link to="/" style={{ marginRight: '20px' }}>HOME</Link>
