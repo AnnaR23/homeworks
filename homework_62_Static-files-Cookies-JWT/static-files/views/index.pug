@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='icon', href='/favicon.ico')
+        link(rel='stylesheet', href='/styles.css')
+    body(class=theme)
+        h1= title
+        if user
+          p Hello, #{user.username}!
+          a(href='/logout') Logout
+        else
+            p You are not logged in.
+            a(href='/register') Registration
+            a(href='/login') Login
+        p Current theme: #{theme}
+        p Select theme:
+        a(href='/set-theme/light') Light theme
+        a(href='/set-theme/dark') Dark theme
+
+

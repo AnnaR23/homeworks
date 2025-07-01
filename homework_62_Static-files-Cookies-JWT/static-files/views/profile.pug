@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='icon', href='/favicon.ico')
+        link(rel='stylesheet', href='/styles.css')
+    body(class=theme)
+        h1 Hello, #{user.username}!
+        p This is your secure profile page.
+        a(href='/') Back to home
+        a(href='/logout') Logout
