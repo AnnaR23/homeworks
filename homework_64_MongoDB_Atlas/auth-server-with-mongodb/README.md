@@ -25,7 +25,7 @@
 
 ```bash
 git clone https://github.com/AnnaR23/homeworks.git
-cd passport-auth-server
+cd homeworks/homework_64_MongoDB_Atlas/auth-server-with-mongodb 
 ```
 ## Установить зависимости
 npm install
