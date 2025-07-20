@@ -1,0 +1,14 @@
+services:
+  myapp:
+    image: myapp:latest
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb+srv://mash1977:TRCZLbmotsN6BG9V@mycluster.jy51fdo.mongodb.net/shopDB?retryWrites=true&w=majority
+      - PORT=3000
+
+
+
+
