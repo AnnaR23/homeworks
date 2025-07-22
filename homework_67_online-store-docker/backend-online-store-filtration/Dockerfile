@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Команда для запуску додатка, для власних додатків замінити на CMD ["node", "src/app.mjs"]
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]

@@ -64,9 +64,9 @@
 
 ---
 
-## Запуск приложения через Docker:
-### Запуск контейнеров:
-- docker-compose up 
+## Запуск проекта через Docker:
+### Сборка и запуск контейнеров:
+- docker-compose up --build
 (Если контейнеры успешно запустятся, вы увидите сообщение:
 Connected to MongoDB using MongoDB Driver
 Server started on port 3000)
