@@ -1,9 +1,0 @@
-quit()
-exit
-docker compose down
-exit
-docker compose down
-docker ps -a
-db.createCollection("assignments")
-show dbs
-use studentDB
