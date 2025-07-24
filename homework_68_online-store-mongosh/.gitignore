@@ -28,6 +28,8 @@ dist-ssr
 *.sw?
 
 backend-online-store-filtration/data/db/
+backend-online-store/data/db/
+
 
 
 
