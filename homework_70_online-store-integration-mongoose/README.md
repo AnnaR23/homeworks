@@ -1,0 +1,160 @@
+# Онлайн магазин на Node.js и MongoDB с использованием Mongoose
+
+## Описание:
+Это учебный проект онлайн-магазина, где пользователи могут:
+
+   - просматривать каталог товаров,
+   - фильтровать товары по категории, цене и названию,
+   - просматривать подробную информацию о каждом товаре,
+   - добавлять товары в корзину,
+   - видеть график общей стоимости корзины,
+   - получать уведомления при действиях,
+   - автоматически сбрасывать корзину при бездействии более 5 минут.
+
+Проект состоит из фронтенда на React и бэкенда на Node.js + MongoDB.
+
+## Используемые технологии:
+
+### Фронтенд:
+
+- React
+- React Router
+- Context API (для управления корзиной)
+- React Toastify (для уведомлений)
+- Chart.js (для графиков)
+- Luxon (для отображения даты, времени)
+- React Idle Timer (для сброса корзины или бездействий)
+
+### Бэкенд:
+
+- Node.js
+- Express
+- MongoDB (через Mongoose)
+- dotenv
+- CORS
+
+---
+
+## Новая функциональность бэкенда:
+
+В рамках рефакторинга проекта была внедрена поддержка **Mongoose** вместо MongoDB Native Driver. Это позволило:
+
+- Улучшить структуру данных с помощью схем.
+- Добавить валидацию типов и обязательных полей.
+- Упростить взаимодействие с базой данных.
+- Повысить читаемость и поддержку кода.
+
+### Описание модели `Product` (Mongoose Schema):
+
+const productSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  category: { type: String, required: true },
+  price: { type: Number, required: true },
+  image: { type: String, required: true },
+  description: { type: String, default: '' }
+}, {
+  timestamps: true
+});
+
+Модель используется для всех операций с товарами: чтение, фильтрация, массовая вставка.
+
+## Как запустить проект:
+
+### 1. Клонировать репозиторий:
+
+ ```bash
+   git clone https://github.com/AnnaR23/homeworks.git
+          cd homework_70_online-store-integration-mongoose
+   ```
+
+2. Установить зависимостей:
+
+    Фронтенд:
+   cd frontend-online-store
+
+    `npm install`.
+
+    Бэкенд:
+
+    cd backend-online-store 
+    `npm install`
+
+
+3. Настроить переменные окружения:
+ - Перейдите в папку `backend-online-store`
+ - Создайте файл `.env` на основе `.env.example`
+ - Внутри `.env` укажите строку подключения к MongoDB:
+   MONGO_URI=ваша_строка_подключения
+
+---
+
+## Запуск проекта через Docker:
+### Сборка и запуск контейнеров:
+- docker-compose up --build
+(Если контейнеры успешно запустятся, вы увидите сообщение:
+Connected to MongoDB using Mongoose
+Server started on port 3000)
+
+  Приложение будет доступно по адресу: http://localhost:3000
+
+### Остановка контейнеров:
+- Ctrl + C (если запускали docker-compose up)
+ или
+- docker-compose down
+
+### Проверка запущенных контейнеров:
+- docker ps 
+ (если ничего не выводится - контейнеры остановлены)
+
+
+## Тестирование API через Postman:
+1. Откройте Postman
+2. Выполните следующие запросы:
+
+   - GET http://localhost:3000/
+     Ответ:
+     Hello from Server!
+
+   - POST http://localhost:3000/seed-products
+     Ответ:
+     { message: "Products seeded successfully." }
+
+   - GET http://localhost:3000/products
+     Вернёт список всех товаров.
+
+   - Примеры фильтрации:
+     GET http://localhost:3000/products?category=smartphones&priceMax=800
+
+
+## CRUD операции:
+  В проекте реализованы операции:
+  - **Создание товаров** — через POST-запрос `/seed-products` (массовое заполнение базы).
+  - **Чтение товаров** — через GET `/products` с поддержкой фильтрации по категории, названию и диапазону цен.
+  - Операции **Update** и **Delete** через API не реализованы.
+
+## Фильтрация товаров
+    Примеры запросов
+    http://localhost:3000/products — все товары
+    http://localhost:3000/products?category=smartphones
+    http://localhost:3000/products?search=Galaxy
+    http://localhost:3000/products?category=laptops&priceMin=500&priceMax=1000
+
+## Поддерживаемые параметры
+    category: категория товара (например, smartphones, laptops)
+    search: часть названия товара
+    priceMin: минимальная цена
+    priceMax: максимальная цена
+
+## Основные фичи
+- Каталог товаров с фильтрацией по:
+    категории,
+    названию,
+    диапазону цен.
+- Страница подробностей товара.
+- Корзина с добавлением, удалением и подсчётом общей стоимости.
+- График стоимости корзины (Chart.js).
+- Сброс корзины при бездействии (через idle timer).
+- Уведомления (toast) при добавлении товара в корзину.
+- LocalStorage для сохранения корзины.
+
+

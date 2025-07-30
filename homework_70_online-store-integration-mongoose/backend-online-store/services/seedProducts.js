@@ -1,0 +1,86 @@
+export const products = [
+    {
+      name: 'Smartphone Samsung Galaxy',
+      category: 'smartphones',
+      price: 900,
+      image: 'smartphone-samsung-galaxy.jpg',
+      description: 'Budget and powerful smartphone'
+    },
+    {
+      name: 'Laptop Asus',
+      category: 'laptops',
+      price: 350,
+      image: 'laptop-asus.jpg',
+      description: 'Laptop for work'
+    },
+    {
+      name: 'TV Samsung Smart 4K',
+      category: 'televisions',
+      price: 300,
+      image: 'tv-samsung-smart-4k.jpg',
+      description: '4K Smart TV mit Wi-Fi and Bluetooth'
+    },
+    {
+      name: 'Acer Aspire A17-51',
+      category: 'laptops',
+      price: 800,
+      image: 'acer-aspire-a17-51.jpg',
+      description: 'Universal and functional device'
+    },
+    {
+      name: 'Dell Inspiron 15-Laptop',
+      category: 'laptops',
+      price: 350,
+      image: 'dell.avif',
+      description: 'A laptop for everyday use, with an elegant, sophisticated design.'
+    },
+    {
+      name: 'DYON Smart 43 VX',
+      category: 'televisions',
+      price: 200,
+      image: 'dyon.jpg',
+      description: '43-inch Full HD TV, Smart TV with Netflix, Prime Video, YouTube and integrated Wi-Fi'
+    },
+    {
+      name: 'LG OLED evo AI',
+      category: 'televisions',
+      price: 950,
+      image: 'lg_oled.avif',
+      description: 'The LG OLED TV gives you access to a wide range of streaming services.'
+    },
+    {
+      name: 'MacBookPro 16',
+      category: 'laptops',
+      price: 1000,
+      image: 'macbookpro-16.avif',
+      description: 'High performance, excellent screen quality and long battery life'
+    },
+    {
+      name: 'Smartphone Galaxy X10',
+      category: 'smartphones',
+      price: 550,
+      image: 'smartphone-galaxy-x10.avif',
+      description: 'The Samsung Galaxy S10\'s display has excellent dynamic range, high brightness, and decent color reproduction.'
+    },
+    {
+      name: 'TOSHIBA VIDAA Smart TV',
+      category: 'televisions',
+      price: 400,
+      image: 'toshiba.jpg',
+      description: 'Toshiba 55UV2363DAN 55-inch TV / VIDAA Smart TV (4K UHD, Dolby Vision HDR, Triple Tuner)'
+    },
+    {
+      name: 'Xiaomi Redmi Silver',
+      category: 'smartphones',
+      price: 150,
+      image: 'xiaomi.jpg',
+      description: 'Xiaomi Redmi makes reading and browsing easier and reduces the need for constant zooming and scrolling'
+    },
+    {
+      name: 'Huawei Leica Vario-Summilux - Blue',
+      category: 'smartphones',
+      price: 200,
+      image: 'xuawei.jpg',
+      description: 'Huawei\'s Leica Vario-Summilux system is designed to deliver high-quality photos and videos'
+    }
+]
